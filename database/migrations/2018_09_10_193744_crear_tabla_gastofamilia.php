@@ -14,7 +14,8 @@ class CrearTablaGastofamilia extends Migration
     public function up()
     {
         Schema::create('t_gastofamilia', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('gfam_id');
+            $table->string('gfam_nom');
             $table->timestamps();
         });
     }

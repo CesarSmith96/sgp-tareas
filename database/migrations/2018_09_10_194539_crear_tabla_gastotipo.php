@@ -14,7 +14,12 @@ class CrearTablaGastotipo extends Migration
     public function up()
     {
         Schema::create('t_gastotipo', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('gtip_id');
+            $table->text('gtip_nom');
+            $table->integer('pro_id')->unsigned();
+            $table->foreign('pro_id')->references('pro_id')->on('t_proyecto');
+            $table->integer('gcat_id')->unsigned();
+            $table->foreign('gcat_id')->references('gcat_id')->on('t_gastocategoria');
             $table->timestamps();
         });
     }

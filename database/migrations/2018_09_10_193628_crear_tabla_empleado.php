@@ -14,7 +14,11 @@ class CrearTablaEmpleado extends Migration
     public function up()
     {
         Schema::create('t_empleado', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('emp_id');
+            $table->text('emp_nom');
+            $table->string('emp_dni');
+            $table->string('emp_tel');
+            $table->text('emp_dir');
             $table->timestamps();
         });
     }

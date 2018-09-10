@@ -14,7 +14,8 @@ class CrearTablaTipoproyecto extends Migration
     public function up()
     {
         Schema::create('t_tipoproyecto', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('tpro_id');
+            $table->string('tpro_nom');
             $table->timestamps();
         });
     }

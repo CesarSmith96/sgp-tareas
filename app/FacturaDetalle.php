@@ -8,9 +8,9 @@ class FacturaDetalle extends Model
 {
     protected $table = 't_facturadetalle';
     protected $primaryKey = 'facd_id';
-    /*protected $hidden = [
+    protected $hidden = [
       'created_at', 'updated_at',
-  	];*/
+  	];
   	protected $fillable = [
   		'facd_desc', 'facd_cant', 'facd_punit'.'fac_id', 'gtip_id', 'um_id'
   		];

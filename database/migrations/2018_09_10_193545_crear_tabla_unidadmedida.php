@@ -16,7 +16,7 @@ class CrearTablaUnidadmedida extends Migration
         Schema::create('t_unidadmedida', function (Blueprint $table) {
             $table->increments('um_id');
             $table->string('um_desc');
-            $table->string('var')
+            $table->string('um_abr')
             $table->timestamps();
         });
     }

@@ -14,7 +14,16 @@ class CrearTablaFactura extends Migration
     public function up()
     {
         Schema::create('t_factura', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('fac_id');
+            $table->string('fac_nro');
+            $table->date('fac_fech');
+            $table->integer('fac_tipo');
+            $table->string('fac_est');
+            $table->text('fac_obs');
+            $table->integer('prov_id')->unsigned();
+            $table->foreign('prov_id')->references('prov_id')->on('t_proveedor');
+            $table->integer('emp_id')->unsigned();
+            $table->feoreign('emp_id')->references('emp_id')->on('t_empleado');
             $table->timestamps();
         });
     }
