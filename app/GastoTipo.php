@@ -12,7 +12,7 @@ class GastoTipo extends Model
       'created_at', 'updated_at'
   ];
   protected $fillable = [
-        'gcat_nom','pro_id','gcat_id', 
+        'gtip_nom','pro_id','gcat_id', 
   ];
     public function GastoCategoria()
   {
