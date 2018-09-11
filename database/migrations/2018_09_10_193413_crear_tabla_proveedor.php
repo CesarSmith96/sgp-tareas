@@ -14,7 +14,7 @@ class CrearTablaProveedor extends Migration
     public function up()
     {
         Schema::create('t_proveedor', function (Blueprint $table) {
-            $table->increments('provid');
+            $table->increments('prov_id');
             $table->text('prov_nom');
             $table->string('prov_ruc');
             $table->timestamps();
