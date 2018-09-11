@@ -29,5 +29,9 @@ class Proyecto extends Model
   {
       return $this->hasMany('sgp\Valorizacionr','pro_id');
   }
+  public function Valorizacionesc()
+  {
+      return $this->hasMany('sgp\Valorizacionc','pro_id');
+  }
 }
 

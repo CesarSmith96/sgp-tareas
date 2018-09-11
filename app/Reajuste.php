@@ -18,8 +18,8 @@ class Reajuste extends Model
   {
       return $this->belongsTo('sgp\ReajusteCategorias','reac_id');
   }
-  public function Valorizaciones()
+  public function Valorizacionesr()
   {
-      return $this->belongTo('sgp\Valorizaciones','valr_id');
+      return $this->belongsTo('sgp\Valorizacionr','valr_id');
   }
 }

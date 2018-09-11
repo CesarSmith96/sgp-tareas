@@ -18,4 +18,8 @@ class ReajusteCategoria extends Model
   {
       return $this->belongsTo('sgp\ReajusteFamilia','reaf_id');
   }
+  public function Reajustes()
+  {
+      return $this->hasMany('sgp\Reajuste','reac_id');
+  }
 }
