@@ -20,7 +20,7 @@ class CrearTablaReajuste extends Migration
             $table->string('rea_oper');
             $table->integer('reac_id')->unsigned();
             $table->integer('valr_id')->unsigned();
-            $table->foreign('react_id')->references('react_id')->on('t_reajustecategoria');
+            $table->foreign('reac_id')->references('reac_id')->on('t_reajustecategoria');
             $table->foreign('valr_id')->references('valr_id')->on('t_valorizacionr');
             $table->timestamps();
         });
