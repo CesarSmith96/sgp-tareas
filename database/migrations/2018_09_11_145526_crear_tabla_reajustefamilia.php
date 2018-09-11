@@ -14,7 +14,8 @@ class CrearTablaReajustefamilia extends Migration
     public function up()
     {
         Schema::create('t_reajustefamilia', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('reaf_id');
+            $table->string('reaf_nom');
             $table->timestamps();
         });
     }

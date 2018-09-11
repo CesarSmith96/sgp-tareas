@@ -14,7 +14,10 @@ class CrearTablaReajustecategoria extends Migration
     public function up()
     {
         Schema::create('t_reajustecategoria', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('reac_id');
+            $table->string('reac_nom');
+            $table->integer('reaf_id')->unsigned();
+            $table->foreign('reaf_id')->references('reaf_id')->on('t_reajustefamilia');
             $table->timestamps();
         });
     }
