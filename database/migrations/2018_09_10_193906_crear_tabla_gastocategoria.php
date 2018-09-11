@@ -17,7 +17,7 @@ class CrearTablaGastocategoria extends Migration
             $table->increments('gcat_id');
             $table->string('gcat_nom');
             $table->integer('gfam_id')->unsigned();
-            $table->foreing('gfam_id')->references('gfam_id')->on('t_gastofamilia');
+            $table->foreign('gfam_id')->references('gfam_id')->on('t_gastofamilia');
             $table->timestamps();
         });
     }

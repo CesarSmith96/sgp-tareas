@@ -23,7 +23,7 @@ class CrearTablaFactura extends Migration
             $table->integer('prov_id')->unsigned();
             $table->foreign('prov_id')->references('prov_id')->on('t_proveedor');
             $table->integer('emp_id')->unsigned();
-            $table->feoreign('emp_id')->references('emp_id')->on('t_empleado');
+            $table->foreign('emp_id')->references('emp_id')->on('t_empleado');
             $table->timestamps();
         });
     }
