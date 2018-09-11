@@ -21,17 +21,21 @@ class Proyecto extends Model
   {
       return $this->belongsTo('sgp\TipoProyecto','tpro_id');
   }
-  public function TipoProyectos()
+  public function Gastotipos()
   {
       return $this->hasMany('sgp\GastoTipo','pro_id');
   }
-  public function Valorizacionesr()
+  public function Ingresos()
   {
-      return $this->hasMany('sgp\Valorizacionr','pro_id');
+      return $this->hasMany('sgp\Ingreso','pro_id');
   }
   public function Valorizacionesc()
   {
       return $this->hasMany('sgp\Valorizacionc','pro_id');
+  }
+  public function Adelantos()
+  {
+      return $this->hasMany('sgp\Adelanto','pro_id');
   }
 }
 

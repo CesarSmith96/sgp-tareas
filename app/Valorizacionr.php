@@ -12,10 +12,6 @@ class Valorizacionr extends Model
       'created_at', 'updated_at'
   ];
   protected $fillable = [
-        'valr_nro','valr_cd','valr_fechin','valr_fechfin','valr_tipo','valr_gg','valr_uti','valr_pro','valr_est','pro_id',
+        'valr_nro','valr_cd','valr_fechin','valr_fechfin','valr_tipo','valr_gg','valr_uti','valr_pro','valr_est'
   ];
-  public function Proyecto()
-  {
-      return $this->belongsTo('sgp\Proyecto','pro_id');
-  }
 }
