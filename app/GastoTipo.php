@@ -20,7 +20,12 @@ class GastoTipo extends Model
   }
   public function Proyectos()
   {
-      return $this->hasMany('sgp\Proyecto','gtip_id');
+      return $this->belongsTo('sgp\Proyecto','pro_id');
   }
+  public function FacturaDetalles()
+  {
+      return $this->hasMany('sgp\FacturaDetalle','gtip_id');
+  }
+
 }
 
