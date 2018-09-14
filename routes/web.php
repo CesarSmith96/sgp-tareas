@@ -25,3 +25,18 @@ Route::get('/headeradmin', function(){
 Route::get('/paginaenblanco', function(){
 	return view('plantillas.paginaenblanco');
 });
+Route::get('clientemostrar','ClienteController@getIndex');
+
+Route::get('crear','ClienteController@getCrear');
+
+Route::post('crear','ClienteController@postCrear');
+
+Route::get('editar','ClienteController@getEditar');
+
+Route::post('editar','ClienteController@postEditar');
+
+Route::get('eliminar','ClienteController@getEliminar');
+
+Route::get('prueba', function(){
+	return "Hola";
+});
