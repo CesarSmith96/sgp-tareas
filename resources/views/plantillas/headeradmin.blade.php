@@ -411,39 +411,16 @@
 					<ul class="nav nav-sidebar" data-nav-type="accordion">
 
 						<!-- Main -->
-						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
+						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Mantenimientos</div> <i class="icon-menu" title="Main"></i></li>
 						<li class="nav-item">
-							<a href="pagina-en-blanco.html" class="nav-link active">
+							<a href="/mantenimientos/clientes" class="nav-link active">
 								<i class="icon-home4"></i>
 								<span>
-									Pagina en Blanco
+									Clientes
 								</span>
 							</a>
 						</li>
-						<li class="nav-item">
-							<a href="index.html" class="nav-link">
-								<i class="icon-home4"></i>
-								<span>
-									Pagina Dashboard
-								</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="contenedores.html" class="nav-link">
-								<i class="icon-home4"></i>
-								<span>
-									Contenedores
-								</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="formularios.html" class="nav-link">
-								<i class="icon-home4"></i>
-								<span>
-									formularios
-								</span>
-							</a>
-						</li>
+						
 						
 						<li class="nav-item nav-item-submenu">
 							<a href="#" class="nav-link"><i class="icon-tree5"></i> <span>Niveles de Menu</span></a>
