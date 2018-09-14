@@ -1,69 +1,106 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
+<!-- Mirrored from demo.interface.club/limitless/bs4/Template/layout_1/LTR/default/full/login_background.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Sep 2018 18:19:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Iniciar Sesión - Sistema de Gestión de Proyectos</title>
 
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="{{asset('global_assets/css/icons/icomoon/styles.css')}}" rel="stylesheet" type="text/css">
+	<link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+	<link href="{{asset('assets/css/bootstrap_limitless.min.css')}}" rel="stylesheet" type="text/css">
+	<link href="{{asset('assets/css/layout.min.css')}}" rel="stylesheet" type="text/css">
+	<link href="{{asset('assets/css/components.min.css')}}" rel="stylesheet" type="text/css">
+	<link href="{{asset('assets/css/colors.min.css')}}" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+	<!-- Core JS files -->
+	<script src="{{asset('global_assets/js/main/jquery.min.js')}}"></script>
+	<script src="{{asset('global_assets/js/main/bootstrap.bundle.min.js')}}"></script>
+	<script src="{{asset('global_assets/js/plugins/loaders/blockui.min.js')}}"></script>
+	<!-- /core JS files -->
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+	<!-- Theme JS files -->
+	<script src="{{asset('global_assets/js/plugins/forms/styling/uniform.min.js')}}"></script>
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+	<script src="{{asset('assets/js/app.js')}}"></script>
+	<script src="{{asset('global_assets/js/demo_pages/login.js')}}"></script>
+	<!-- /theme JS files -->
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+</head>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+<body class="bg-slate-800">
 
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+	<!-- Page content -->
+	<div class="page-content">
 
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+		<!-- Main content -->
+		<div class="content-wrapper">
 
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
+			<!-- Content area -->
+			<div class="content d-flex justify-content-center align-items-center">
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+				<!-- Login card -->
+				<form class="login-form" method="post" action="{{ route('login') }}">
+					{{ csrf_field() }}
+					<div class="card mb-0">
+						<div class="card-body">
+							<div class="text-center mb-3">
+								<i class="icon-people icon-2x text-warning-400 border-warning-400 border-3 rounded-round p-3 mb-3 mt-1"></i>
+								<h5 class="mb-0">Inicia sesión en tu cuenta</h5>
+								<span class="d-block text-muted">Tus credenciales</span>
+							</div>
+
+							<div class="form-group form-group-feedback form-group-feedback-left">
+								<input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus placeholder="e-mail">
+								<div class="form-control-feedback">
+									<i class="icon-user text-muted"></i>
+								</div>
+							</div>
+
+							<div class="form-group form-group-feedback form-group-feedback-left">
+								<input id="password" type="password" class="form-control" name="password" required placeholder="contraseña">
+								<div class="form-control-feedback">
+									<i class="icon-lock2 text-muted"></i>
+								</div>
+							</div>
+
+							<div class="form-group d-flex align-items-center">
+								<div class="form-check mb-0">
+									<label class="form-check-label">
+										<input type="checkbox" name="remember" class="form-input-styled" checked data-fouc>
+										Recordar Contraseña
+									</label>
+								</div>
+
+								<a href="#" class="ml-auto">Olvidaste tu contraseña?</a>
+							</div>
+
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary btn-block">Iniciar Sesión <i class="icon-circle-right2 ml-2"></i></button>
+							</div>
+
+							<span class="form-text text-center text-muted">Desarrollado por <a href="https://www.binarioconsultores.com">Binario Consultores</a></span>
+						</div>
+					</div>
+				</form>
+				<!-- /login card -->
+
+			</div>
+			<!-- /content area -->
+
+		</div>
+		<!-- /main content -->
+
+	</div>
+	<!-- /page content -->
+
+</body>
+
+<!-- Mirrored from demo.interface.club/limitless/bs4/Template/layout_1/LTR/default/full/login_background.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Sep 2018 18:19:48 GMT -->
+</html>

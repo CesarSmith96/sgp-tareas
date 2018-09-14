@@ -3,6 +3,7 @@
 namespace sgp\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        if(Auth::user()->tipo=='admin'){
+            return view('home');
+        }else{
+            if (Auth::user()->tipo=='gerencia') {
+                return view('homegerencia');
+            }
+            if (Auth::user()->tipo=='caja') {
+                return view('homecaja');
+            }
+            else{
+                $this->guard()->logout();
+            }
+        }
     }
 }

@@ -12,9 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/home');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/headeradmin', function(){
+	return view('plantillas.headeradmin');
+});
+Route::get('/paginaenblanco', function(){
+	return view('plantillas.paginaenblanco');
+});
