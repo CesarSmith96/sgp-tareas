@@ -16,7 +16,6 @@ class CrearTablaCliente extends Migration
         Schema::create('t_cliente', function (Blueprint $table) {
             $table->increments('cli_id');
             $table->text('cli_nom');
-            $table->string('cli_ruc');
             $table->timestamps();
         });
     }

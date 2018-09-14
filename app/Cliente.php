@@ -12,7 +12,7 @@ class Cliente extends Model
       'created_at', 'updated_at',
   ];
   protected $fillable = [
-        'cli_nom','cli_ruc', 
+        'cli_nom',
   ];
   public function Proyectos()
   {
