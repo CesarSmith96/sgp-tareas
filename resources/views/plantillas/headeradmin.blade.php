@@ -350,12 +350,12 @@
 						<img src="{{asset('global_assets/images/demo/users/face11.jpg')}}" class="rounded-circle" alt="">
 						<span>{{ Auth::user()->name }}</span>
 					</a>
-
+						
 					<div class="dropdown-menu" aria-labelledby="dropdownUserMenu">
-	                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-	                               document.getElementById('logout-form').submit();">
+	                    <a class="dropdown-item" class="icon-switch2" href="{{ route('logout') }}" onclick="event.preventDefault();
+	                               document.getElementById('logout-form').submit();"> 
 	                        <div>
-	                            <span>Cerrar Sesión</span>
+	                            <span><i class="icon-switch2"></i>  Cerrar Sesión</span>
 	                        </div>
 	                    </a>
 	                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
