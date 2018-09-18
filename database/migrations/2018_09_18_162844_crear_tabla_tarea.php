@@ -14,7 +14,19 @@ class CrearTablaTarea extends Migration
     public function up()
     {
         Schema::create('t_tarea', function (Blueprint $table) {
-            $table->increments('id');
+           $table->increments('tar_id');
+            $table->text('tar_nom');
+            $table->string('tar_descripcion');
+            $table->date('tar_fechin');
+            $table->date('tar_fechfin');
+            $table->string('tar_prio');
+            $table->string('tar_est');
+            $table->integer('tar_idpadre')->unsigned();
+            $table->integer('pro_id')->unsigned();
+            $table->integer('usu_id')->unsigned();
+            $table->foreign('tar_idpadre')->references('tar_idpadre')->on('t_tarea');
+            $table->foreign('pro_id')->references('pro_id')->on('t_proyecto');
+            $table->foreign('usu_id')->references('usu_id')->on('t_usuario');
             $table->timestamps();
         });
     }

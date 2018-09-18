@@ -14,7 +14,13 @@ class CrearTablaPersona extends Migration
     public function up()
     {
         Schema::create('t_persona', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('per_id');
+            $table->text('per_nom');
+            $table->text('per_ape');
+            $table->string('per_tel');
+            $table->string('per_dni');
+            $table->string('per_dir');
+            $table->string('per_email');
             $table->timestamps();
         });
     }
