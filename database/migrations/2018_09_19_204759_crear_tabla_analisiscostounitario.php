@@ -16,11 +16,12 @@ class CrearTablaAnalisiscostounitario extends Migration
         Schema::create('t_analisiscostounitario', function (Blueprint $table) {
             $table->increments('acu_id');
             $table->decimal('acu_prec');
-            $table->dacimal('acu_cant');
+            $table->decimal('acu_cant');
             $table->decimal('acu_cuad');
             $table->integer('part_id')->unsigned();
             $table->integer('recum_id')->unsigned();
             $table->integer('acu_idpadre')->unsigned();
+
             $table->foreign('part_id')->references('part_id')->on('t_partida');
             $table->foreign('recum_id')->references('recum_id')->on('t_recursounidadmedida');
             $table->timestamps();

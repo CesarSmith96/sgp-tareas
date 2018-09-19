@@ -26,8 +26,8 @@ class CrearTablaPartida extends Migration
             $table->integer('um_id')->unsigned();
             $table->integer('part_idpadre')->unsigned();
             $table->integer('pres_id')->unsigned();
-            $table->foreign('umr1_id')->references('umr1_id')->on('t_unidadmedida');
-            $table->foreign('umr2_id')->references('umr2_id')->on('t_unidadmedida');
+            $table->foreign('umr1_id')->references('um_id')->on('t_unidadmedida');
+            $table->foreign('umr2_id')->references('um_id')->on('t_unidadmedida');
             $table->foreign('um_id')->references('um_id')->on('t_unidadmedida');
             $table->foreign('pres_id')->references('pres_id')->on('t_presupuesto');
             $table->timestamps();
