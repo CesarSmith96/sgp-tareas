@@ -14,7 +14,7 @@ class Precio extends Model
   protected $fillable = [
         'prec_monto','recum_id',
   ];
-  public function Proyectos()
+  public function RecursoUnidadMedida()
   {
       return $this->belongsTo('sgp\RecursoUnidadMedida','recum_id');
   }
