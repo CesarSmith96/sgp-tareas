@@ -12,7 +12,7 @@ class Tarea extends Model
       'created_at', 'updated_at'
   ];
   protected $fillable = [
-        'tar_nom','tar_descripcion','tar_fechin','tar_fechin','tar_prio','tar_est','tar_idpadre','pro_id','usu_id',
+        'tar_nom','tar_desc','tar_fechin','tar_fechfin','tar_prio','tar_est','pro_id','usu_id',
   ];
    public function Proyecto()
   {
@@ -22,8 +22,8 @@ class Tarea extends Model
   {
       return $this->belongsTo('sgp\Usuario','usu_id');
   }
-   public function Tarea()
+ /*  public function Tarea()
   {
       return $this->belongsTo('sgp\Tarea','tar_idpadre');
-  }
+  }*/
 }

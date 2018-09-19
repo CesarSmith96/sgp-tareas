@@ -37,6 +37,10 @@ Route::post('editar','ClienteController@postEditar');
 
 Route::get('eliminar','ClienteController@getEliminar');
 
+Route::get('/admin/persona','PersonaController@getIndex');
+
+Route::get('/admin/persona/crearpersona','PersonaController@getIndex');
+
 Route::get('prueba', function(){
 	return "Hola";
 });

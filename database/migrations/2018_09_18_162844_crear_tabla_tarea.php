@@ -16,7 +16,7 @@ class CrearTablaTarea extends Migration
         Schema::create('t_tarea', function (Blueprint $table) {
            $table->increments('tar_id');
             $table->text('tar_nom');
-            $table->string('tar_descripcion');
+            $table->string('tar_desc');
             $table->date('tar_fechin');
             $table->date('tar_fechfin');
             $table->string('tar_prio');
@@ -24,7 +24,7 @@ class CrearTablaTarea extends Migration
             $table->integer('tar_idpadre')->unsigned();
             $table->integer('pro_id')->unsigned();
             $table->integer('usu_id')->unsigned();
-            $table->foreign('tar_idpadre')->references('tar_idpadre')->on('t_tarea');
+            //$table->foreign('tar_idpadre')->references('tar_idpadre')->on('t_tarea');
             $table->foreign('pro_id')->references('pro_id')->on('t_proyecto');
             $table->foreign('usu_id')->references('usu_id')->on('t_usuario');
             $table->timestamps();

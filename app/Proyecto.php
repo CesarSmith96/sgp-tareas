@@ -37,5 +37,13 @@ class Proyecto extends Model
   {
       return $this->hasMany('sgp\Adelanto','pro_id');
   }
+  public function Tareas()
+  {
+    return $this->hasMany('sgp\Tarea','pro_id');
+  }
+  public function Proyectousuarios()
+  {
+    return $this->hasMany('sgp\ProyectoUsuario','pro_id');
+  }
 }
 

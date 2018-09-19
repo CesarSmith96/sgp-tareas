@@ -12,7 +12,7 @@ class Tarea extends Model
       'created_at', 'updated_at'
   ];
   protected $fillable = [
-        'per_nom','per_ape','per_tel','per_dni','per_dir','per_email','per_id',
+        'per_nom','per_ape','per_tel','per_dni','per_dir','per_email',
   ];
   public function Usuarios()
   {
@@ -20,6 +20,6 @@ class Tarea extends Model
   }
   public function Empleados()
   {
-      return $this->hasMany('sgp\Emleado','per_id');
+      return $this->hasMany('sgp\Empleado','per_id');
   }
 }

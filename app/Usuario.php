@@ -20,7 +20,7 @@ class Usuario extends Model
     }
     public function Tareas()
     {
-      return $this->hasMany('sgp\Tareas','usu_id');
+      return $this->hasMany('sgp\Tarea','usu_id');
     }
      public function Persona()
   {
