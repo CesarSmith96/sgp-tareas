@@ -15,11 +15,11 @@ class CrearTablaRegistrotarea extends Migration
     {
         Schema::create('t_registrotarea', function (Blueprint $table) {
            $table->increments('regitar_id');
-            $table->decimal('regitar_pro'),
-            $table->string('regitar_tit'),
-            $table->string('regitar_desc'),
-            $table->string('regitar_tiporeg'),
-            $table->date('regitar_fech')
+            $table->decimal('regitar_por');
+            $table->string('regitar_tit');
+            $table->string('regitar_desc');
+            $table->string('regitar_tiporeg');
+            $table->date('regitar_fech');
             $table->integer('tar_id')->unsigned();
             $table->foreign('tar_id')->references('tar_id')->on('t_tarea');
             $table->timestamps();
