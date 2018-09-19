@@ -14,7 +14,13 @@ class CrearTablaArchivotarea extends Migration
     public function up()
     {
         Schema::create('t_archivotarea', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('archita_id');
+            $table->string('archita_nom'),
+            $table->double('archita_peso'),
+            $table->string('archita_tip'),
+            $table->string('archita_dir'),
+            $table->integer('regitar_id')->unsigned();
+            $table->foreign('regitar_id')->references('regitar_id')->on('t_registrotarea');
             $table->timestamps();
         });
     }
