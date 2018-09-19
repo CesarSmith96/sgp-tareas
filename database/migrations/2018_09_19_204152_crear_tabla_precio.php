@@ -14,7 +14,10 @@ class CrearTablaPrecio extends Migration
     public function up()
     {
         Schema::create('t_precio', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('prec_id');
+            $table->decimal('prec_monto');
+            $table->integer('recum_id')->unsigned();
+            $table->foreign('recum_id')->references('recum_id')->on('t_recursounidadmedida');
             $table->timestamps();
         });
     }

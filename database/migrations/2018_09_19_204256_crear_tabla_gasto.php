@@ -14,7 +14,8 @@ class CrearTablaGasto extends Migration
     public function up()
     {
         Schema::create('t_gasto', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('gas_id');
+            $table->string('gas_nom');
             $table->timestamps();
         });
     }

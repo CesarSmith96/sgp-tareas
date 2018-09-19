@@ -14,7 +14,13 @@ class CrearTablaEgreso extends Migration
     public function up()
     {
         Schema::create('t_egreso', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('egre_id');
+            $table->decimal('egre_monto');
+            $table->integer('pro_id')->unsigned();
+            $table->integer('facd_id')->unsigned();
+            $table->integer('egre_idpadre')->unsigned();
+            $table->foreign('pro_id')->references('pro_id')->on('t_proyecto');
+            $table->foreign('facd_id')->references('facd_id')->on('t_facturadetalle');
             $table->timestamps();
         });
     }

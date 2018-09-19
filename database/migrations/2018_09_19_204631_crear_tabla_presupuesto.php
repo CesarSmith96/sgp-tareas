@@ -14,7 +14,10 @@ class CrearTablaPresupuesto extends Migration
     public function up()
     {
         Schema::create('t_presupuesto', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('pres_id');
+            $table->string('pres_dir');
+            $table->integer('pro_id')->unsigned();
+            $table->foreign('pro_id')->references('pro_id')->on('t_proyecto');
             $table->timestamps();
         });
     }

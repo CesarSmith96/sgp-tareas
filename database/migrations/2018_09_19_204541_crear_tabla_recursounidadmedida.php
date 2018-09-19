@@ -14,7 +14,11 @@ class CrearTablaRecursounidadmedida extends Migration
     public function up()
     {
         Schema::create('t_recursounidadmedida', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('recum_id');
+            $table->integer('rec_id')->unsigned();
+            $table->integer('um_id')->unsigned();
+            $table->foreign('rec_id')->references('rec_id')->on('t_recurso');
+            $table->foreign('um_id')->references('um_id')->on('t_unidadmedida');
             $table->timestamps();
         });
     }

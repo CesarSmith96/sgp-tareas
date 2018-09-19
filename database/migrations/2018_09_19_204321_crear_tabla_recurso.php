@@ -14,7 +14,9 @@ class CrearTablaRecurso extends Migration
     public function up()
     {
         Schema::create('t_recurso', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('rec_id');
+            $table->string('rec_nom');
+            $table->string('rec_cod');
             $table->timestamps();
         });
     }
